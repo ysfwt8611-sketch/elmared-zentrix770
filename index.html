@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELMARED ZENTRIX</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#061426;
+ color:white;
+ font-family:Arial,sans-serif;
+}
+header{
+ padding:22px 15px;
+ background:#091c32;
+ border-bottom:2px solid #263c58;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+}
+.logo{color:#ff568c;font-size:21px;font-weight:bold}
+button{
+ background:linear-gradient(90deg,#08c9c5,#7045ff);
+ border:0;border-radius:12px;
+ padding:13px;color:white;
+ font-size:16px;font-weight:bold;
+}
+main{padding:20px;max-width:650px;margin:auto}
+h1{text-align:center;color:#ff6595}
+.subtitle{text-align:center;color:#aabbd0}
+.card{
+ background:#10243b;
+ border:1px solid #29415e;
+ border-radius:16px;
+ padding:18px;margin:16px 0;
+}
+.card h3{color:#ff6595}
+select,input{
+ width:100%;padding:14px;
+ border-radius:10px;
+ border:1px solid #425675;
+ background:#09182b;color:white;
+ margin:9px 0;
+}
+.full{width:100%;margin-top:12px}
+footer{text-align:center;color:#8ea2ba;padding:25px}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">ELMARED</div>
+ <div>ZENTRIX ⚡</div>
+</header>
+<main>
+ <h1>مرحباً بك في المارد</h1>
+ <p class="subtitle">منصة إدارة خدمات الاتصالات</p>
+
+ <div class="card">
+  <h3>🌍 اختر الدولة</h3>
+  <select id="country">
+   <option>مصر 🇪🇬</option>
+   <option>السودان 🇸🇩</option>
+  </select>
+ </div>
+
+ <div class="card">
+  <h3>📱 الخدمات</h3>
+  <select id="service">
+   <option>خدمة الرسائل المصرح بها</option>
+   <option>خدمة دعم العملاء</option>
+  </select>
+  <button class="full" onclick="sendRequest()">
+   إرسال طلب الخدمة
+  </button>
+  <p id="result"></p>
+ </div>
+
+ <div class="card">
+  <h3>🤖 دعم تيليجرام</h3>
+  <p>تواصل مع إدارة ELMARED ZENTRIX</p>
+  <button class="full"
+   onclick="window.open('https://t.me/','_blank')">
+   فتح تيليجرام
+  </button>
+ </div>
+</main>
+<footer>
+ ELMARED ZENTRIX © 2026
+</footer>
+<script>
+function sendRequest(){
+ document.getElementById('result').textContent =
+ 'تم تجهيز طلبك. يرجى التواصل مع الإدارة.';
+}
+</script>
+</body>
+</html>
